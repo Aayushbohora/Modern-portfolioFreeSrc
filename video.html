@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Nepomodz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #d4af37;
+      letter-spacing: 2px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .item {
+      background: #1c1c1c;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item:hover {
+      transform: scale(1.03);
+    }
+
+    .item img {
+      width: 100%;
+      display: block;
+      height: auto;
+      border-bottom: 1px solid #444;
+    }
+
+    .item video {
+      width: 100%;
+      height: 200px;          /* Fixed height for videos */
+      object-fit: cover;      /* Cover the container nicely */
+      border-bottom: 1px solid #444;
+      background: black;
+    }
+
+    .caption {
+      padding: 12px 16px;
+      font-size: 16px;
+      color: #ccc;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .caption {
+        font-size: 14px;
+      }
+
+      .item video {
+        height: 160px; /* smaller on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📷 Gallery Showcase</h1>
+
+  <div class="gallery">
+
+    <!-- Photo -->
+   
+
+    <!-- Video -->
+    <div class="item">
+      <video controls>
+        <source src="videos/dus.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">Smart Dustbin Demo</div>
+    </div>
+
+    <div class="item">
+      <video controls>
+        <source src="videos/train.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">Train Gate Project</div>
+    </div>
+
+    <!-- Photo -->
+    <div class="item">
+      <img src="images/Anim.jpg" alt="ML projrct" />
+      <div class="caption">This is ML Project </div>
+    </div>
+
+    <div class="item">
+      <img src="images/nep.jpg" alt="Nepsi Bot" />
+      <div class="caption">Nepsi Bot</div>
+    </div>
+
+    <div class="item">
+      <img src="images/aryan.jpg" alt="Flappy Aryan" />
+      <div class="caption">Flappy Aryan</div>
+    </div>
+
+    <div class="item">
+      <img src="images/os.jpg" alt="OS made by HTML and CSS" />
+      <div class="caption">OS made by HTML/CSS</div>
+    </div>
+
+    <div class="item">
+      <img src="images/Dea.jpg" alt="Modmenu For Dead target" />
+      <div class="caption">Modmenu For Dead target</div>
+    </div>
+
+    <div class="item">
+      <img src="images/mar.jpg" alt="Star" />
+      <div class="caption">Star</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
